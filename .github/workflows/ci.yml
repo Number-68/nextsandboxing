@@ -1,25 +1,20 @@
+# steps necessary.
 
-# steps necessary. 
-
-
-# name 
+# name
 
 name: ci
 
-
-
 # --------------------------------------------
-# triggers 
+# triggers
 
-on: 
-  push: 
+on:
+  push:
     branch: ["**"]
-
 
 # --------------------------------------------
 # doing the tests
 
-# this is the basic format? 
+# this is the basic format?
 # jobs:
 #   <job-id>:
 #     runs-on: <runner>
@@ -28,12 +23,5 @@ on:
 #       - <step 2>
 #       - ...
 
-
-jobs: 
-  formatter:
-    run
-
-
-
-
-
+jobs:
+  formatter: run

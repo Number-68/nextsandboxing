@@ -1,0 +1,39 @@
+
+# steps necessary. 
+
+
+# name 
+
+name: ci
+
+
+
+# --------------------------------------------
+# triggers 
+
+on: 
+  push: 
+    branch: ["**"]
+
+
+# --------------------------------------------
+# doing the tests
+
+# this is the basic format? 
+# jobs:
+#   <job-id>:
+#     runs-on: <runner>
+#     steps:
+#       - <step 1>
+#       - <step 2>
+#       - ...
+
+
+jobs: 
+  formatter:
+    run
+
+
+
+
+

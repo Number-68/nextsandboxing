@@ -56,38 +56,11 @@ else{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ESLint 
 console.log("running ESLint");
 run("npx eslint .");
 console.log("Linting cleared!!");
+console.log("hi");
 
 
 // fine.

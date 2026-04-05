@@ -46,11 +46,21 @@ const prettierOk = testRun("npx prettier --check .");
 //applied to variable to be checked and then acted upon.
 
 if (prettierOk){
-    console.log("Your code is looking weird...");
-    run("npx prettier --write .");
+    console.log("Your code is pretty!!!!");
 }
 else{
-    console.log("Your code is pretty!!!!");
+
+
+
+
+
+
+
+
+
+    
+    console.log("Your code is looking weird...");
+    run("npx prettier --write .");
 }
 
 

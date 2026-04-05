@@ -48,7 +48,6 @@ jobs:
       - name: prettierversion
         run: npx prettier --version
 
-        
       - name: Prettier
         run: npx prettier . --check
 

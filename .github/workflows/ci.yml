@@ -23,10 +23,7 @@ on: push
 jobs:
   # format
   formatter:
-    strategy:
-      matrix:
-        os: [ubuntu-24.04, macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: Ubuntu-24.04
 
     steps:
       # ------ setup ------
@@ -91,6 +88,7 @@ jobs:
 
     needs:
       - linter
+      - formatter
     steps:
       # ------ setup ------
       # copies repository into machine

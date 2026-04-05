@@ -80,7 +80,7 @@ jobs:
 
   typecheck:
     runs-on: Ubuntu-24.04
-    needs: 
+    needs:
       - formatter
       - linter
     steps:

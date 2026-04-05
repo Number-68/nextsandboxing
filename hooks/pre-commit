@@ -43,6 +43,9 @@ while (!prettierOk) {
 
   run("npx prettier --write .");
 
+  // critical: changes are not being added that's why they're failing.
+  run("git add .");
+
   prettierOk = testRun("npx prettier --check .");
 }
 

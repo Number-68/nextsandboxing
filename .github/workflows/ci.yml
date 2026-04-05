@@ -90,7 +90,6 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     needs:
-      - formatter
       - linter
     steps:
       # ------ setup ------

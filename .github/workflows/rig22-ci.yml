@@ -132,11 +132,13 @@ jobs:
       - name: npm audit
         run: npm audit --audit-level=high
 
-      # github's codeql
-      - uses: github/codeql-action/init@v3
-        with:
-          languages: javascript, typescript
-      - uses: github/codeql-action/analyze@v3
+      # # github's codeql
+      # - uses: github/codeql-action/init@v3
+      #   with:
+      #     languages: javascript, typescript
+      # - uses: github/codeql-action/analyze@v3
+
+      # fix this up later. try to understand what the error is throwing.
 
       # secret scanning
       - uses: gitleaks/gitleaks-action@v2

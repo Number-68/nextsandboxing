@@ -44,6 +44,11 @@ jobs:
         run: npm ci
 
       # ------ test --------
+
+      - name: prettierversion
+        run: npx prettier --version
+
+        
       - name: Prettier
         run: npx prettier . --check
 

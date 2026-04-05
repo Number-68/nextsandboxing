@@ -48,8 +48,6 @@ while (!prettierOk) {
 
 console.log("Finally. it's looking pretty!!!!");
 
-
-
 // ESLint
 console.log("running ESLint");
 run("npx eslint .");

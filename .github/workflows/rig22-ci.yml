@@ -145,7 +145,7 @@ jobs:
 
   # unit test
   unit-test:
-    needs: typecheck
+    needs: security
     runs-on: Ubuntu-24.04
 
     steps:
@@ -167,7 +167,7 @@ jobs:
 
   # integration test
   integration-test:
-    needs: typecheck
+    needs: unit-test
     runs-on: Ubuntu-24.04
 
     steps:
@@ -195,7 +195,7 @@ jobs:
         os: [ubuntu-24.04, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
 
-    needs: security
+    needs: integration-test
 
     steps:
       # ------ setup ------
@@ -222,7 +222,7 @@ jobs:
   # not integrated
 
   E2E-test:
-    needs: typecheck
+    needs: build-test
     runs-on: Ubuntu-24.04
 
     steps:

@@ -6,39 +6,6 @@ const { execSync } = require("node:child_process");
 // execSync allows you to run shell commands one after another.
 // "synchonously"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function run(cmd) {
   try {
     // first argument: command
@@ -90,23 +57,7 @@ console.log("hi");
 // fine.
 console.log("all pre-commit checks passed.");
 
-
-
-
-
-
-
-
-
-
-
-
-
 // 0 means nothing wrong.
 // git listens to terminal before continuuing with the process.
 // if sees 0, continues. if sees 1, exits.
 process.exit(0);
-
-
-
-

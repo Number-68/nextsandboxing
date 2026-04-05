@@ -80,7 +80,9 @@ jobs:
 
   typecheck:
     runs-on: Ubuntu-24.04
-
+    needs: 
+      - formatter
+      - linter
     steps:
       # ------ setup ------
       # copies repository into machine
@@ -112,6 +114,7 @@ jobs:
 
   build-test:
     runs-on: Ubuntu-24.04
+    needs: typecheck
 
     steps:
       # ------ setup ------

@@ -38,16 +38,15 @@ let prettierOk = testRun("npx prettier --check .");
 //applied to variable to be checked and then acted upon.
 
 while (!prettierOk) {
-    console.log("your code is looking weird.");
-    console.log("formatting issues found...");
+  console.log("your code is looking weird.");
+  console.log("formatting issues found...");
 
+  run("npx prettier --write .");
 
-    run("npx prettier --write .");
-
-
-
-    prettierOk = testRun("npx prettier --check .");
+  prettierOk = testRun("npx prettier --check .");
 }
+
+console.log("Finally. it's looking pretty!!!!");
 
 
 

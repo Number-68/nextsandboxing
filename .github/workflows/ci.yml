@@ -6,7 +6,6 @@ name: ci
 
 # --------------------------------------------
 # triggers
-
 on: push
 
 # --------------------------------------------
@@ -24,7 +23,10 @@ on: push
 jobs:
   # format
   formatter:
-    runs-on: Ubuntu-24.04
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       # ------ setup ------
@@ -53,7 +55,10 @@ jobs:
 
   # lint
   linter:
-    runs-on: Ubuntu-24.04
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       # ------ setup ------
@@ -79,7 +84,11 @@ jobs:
   # tsc
 
   typecheck:
-    runs-on: Ubuntu-24.04
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
     needs:
       - formatter
       - linter
@@ -113,7 +122,11 @@ jobs:
   # full build test
 
   build-test:
-    runs-on: Ubuntu-24.04
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
     needs: typecheck
 
     steps:
